@@ -6,6 +6,11 @@
   height: 40vmin;
   pointer-events: none;
 }
+.teams{
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

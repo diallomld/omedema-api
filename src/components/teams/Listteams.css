@@ -1,0 +1,129 @@
+.user {
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: #b3e3ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+    height: 300px;
+    margin: 20px;
+  }
+  
+  .paginationBttns {
+    width: 80%;
+    height: 50px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .paginationBttns a {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid hsl(239, 28%, 42%);
+    color: white;
+    cursor: pointer;
+  }
+  
+  .paginationBttns a:hover {
+    color: white;
+    background-color: hsl(239, 28%, 42%);
+  }
+  
+  .paginationActive a {
+    color: white;
+    background-color: hsl(239, 28%, 42%);
+    
+  }
+  
+  .paginationDisabled a {
+    color: grey;
+    background-color: grey;
+  }
+
+.search {
+    width: 50%;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    height: 60px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px
+}
+
+.search-input {
+    color: white;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    margin-top: 5px;
+    caret-color: transparent;
+    line-height: 20px;
+    transition: width 0.4s linear
+}
+
+.previousBttn{
+    color:gray;
+    font-size: large;
+    background: #001529;
+}
+.nextBttn{
+    color:gray;
+    font-size: large;
+    background: #001529;
+}
+
+.search .search-input {
+    padding: 0 10px;
+    width: 100%;
+    caret-color: #536bf6;
+    font-size: 19px;
+    font-weight: 300;
+    color: black;
+    transition: width 0.4s linear
+}
+
+.search-icon {
+    height: 44px;
+    width: 44px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #536bf6;
+    font-size: 10px;
+    bottom: 30px;
+    position: relative;
+    border-radius: 5px
+}
+
+.search-icon:hover {
+    color: #fff !important
+}
+hr.hr-text {
+  position: relative;
+    border: none;
+    height: 20px;
+    font-size: 25px;
+    background: #999;
+}
+
+hr.hr-text::before {
+    content: attr(data-content);
+    display: inline-block;
+    background: #fff;
+    font-weight: bold;
+    font-size: 50px;
+    color: black;
+    border-radius: 30rem;
+    padding: 0.2rem 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
