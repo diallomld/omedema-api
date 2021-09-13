@@ -1,55 +1,89 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router"
-import { getTeamById } from "../../services/teamService"
-import { getUserById } from "../../services/userService"
+import { getTeamById } from "../../services/team/teamService"
+import { getUserById } from "../../services/users/userService"
+import Search from "../common/Search"
+import ListUsers from "../users/ListUsers"
+import ShowTeam from "./ShowTeam"
+import logo from "../../assets/search-solid.svg";
 
 
-function DetailsTeam(){
-  
-    const [team, setTeam] = useState([])
-    const [teamLead, setTeamLead] = useState([])
-  
-    let {id} = useParams()
+function DetailsTeam() {
 
-    const getById = async (idp) => {
+  const [team, setTeam] = useState([])
+  const [teamLead, setTeamLead] = useState([])
+  const [users, setUsers] = useState([])
+  const [usersOfTeam, setUsersOfTeam] = useState([])
+  const [searchUserByName, setSearchUserByName] = useState("");
+  //const element = "371d2ee8-cdf4-48cf-9ddb-04798b79ad9e"
 
-      try {
-        const response = await getTeamById(idp)
+  let { id } = useParams()
+
+
+
+  const getById = () => {
+        getTeamById(id).then(response =>{
+
         setTeam(response.data)
-        
-      } catch (error) {
+        getTeamMembers(response.data.teamMemberIds)
+        console.log('getById ')
+        getTeamLead(response.data.teamLeadId)
+      })
+      .catch (error => {
         console.error(error);
-      }
-    };
-    const getTeamLead = async (idp) => {
-      try {
-          const response = await getTeamById(idp)
+      }) 
+    
+  };
+  const getTeamLead = (idp) => {
+    
+      getUserById(idp).then(response =>{
 
-          setTeamLead(response.data)
-        
-        } catch (error) {
-          console.error(error);
-        }
-    };
+        setTeamLead(response.data)
+        console.log("getTeamLead")
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  };
+  const getTeamMembers = (userList) => {
+    var array = [];
+    userList.forEach(id => {
+      
+      getUserById(id).then(response => {
+        array.push(response.data)
+        console.log("getTeamMembers")
+      })
+        .catch(err => {
+          console.log(err)
+        })
+    });
+    setUsersOfTeam(array)
 
-    useEffect(() => {
-      getById(id)
-      getTeamLead(team.teamLeadId)
-      //console.log('teamlead ' +JSON.stringify(teamLead))
+  };
+
+  const handleChange = (e) => {
+    setSearchUserByName(e.target.value)
+  }
+
+  useEffect(() => {
+    getById()
+    console.log("fonction un")
+    //getTeamLead(team.teamLeadId)
+    console.log("fonction deux")
+    //getTeamMembers(users)
+    console.log("fonction trois")
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[]);
-      return(
-          <>
-            <div className="card" key={team.id}>
-                <div className="card-body">
-                  <h5 className="card-title">Team Name : {team.name}</h5>
-                  <img className="rounded-circle" height="100px" alt="Avatar" width="100px" src={'http://placehold.it/150X150'}/>
-                  <b>Team Lead :</b> {team.teamLeadId?team.teamLeadId: "non defini"}
-                </div>
-            </div>
-            <hr data-content="List of members" className="hr-text"/>
-          </>
-          )
+  }, []);
+  return (
+    <>
+      <ShowTeam team={team} teamLead={teamLead}/>
+      <br/>
+      <hr data-content="List of members" className="hr-text" />
+      <br/>
+      <Search logo={logo} onchange={handleChange} />
+      <ListUsers users={usersOfTeam} searchUserByName={searchUserByName} />
+    </>
+  )
 }
 
 export default DetailsTeam

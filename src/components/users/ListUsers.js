@@ -1,41 +1,44 @@
-import { useEffect, useState } from "react";
-import { getAllUsers } from "../../services/userService";
+import './ListUsers.css'
 
+import location from "../../assets/search-location-solid.svg";
 
+function ListUsers({ users, searchUserByName }) {
 
+  const displayTeams = users
+    .filter(value => {
+      if (searchUserByName === "")
+        return value
+      else if (value.displayName.toLowerCase().includes(searchUserByName.toLowerCase()))
+        return value
 
-
-function ListUsers(props){
-
-    const [users, setUsers] = useState([])
-
-    const getAll = async () => {
-  
-      try {
-        const response = await getAllUsers()
-        setUsers(response.data)
-       //console.log(response.data)
-      } catch (error) {
-        console.error(error);
-      }
-    };
-  
-    useEffect(() => {
-      getAll()
+      return null
     })
+    .map(data => {
+      return (
+        <>
+        <div class="card rounded-3" style={{width:60+'%', marginLeft:20+'%',borderRadius: 10 + 'px'}}>
+          <div class="card-body">
+            <li class="list-group-item">
 
-      return(
-          users.map(data => {
-              return (
-
-                  <div className="card" key={data.id}>
-                  <div className="card-body">
-                    <h5 className="card-title">DisplayName {data.displayName}</h5>
-                  </div>
-                </div>
-              )
-          })
+              <img src={data.avatarUrl} class="rounded-circle" style={{ width: 150 + 'px', height: 150 + 'px' }} alt={data.displayName} />
+              <b>  Display Name:</b> {data.displayName}
+            </li>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><b>firstName: </b>{data.firstName}</li>
+            <li class="list-group-item"><b>lastName: </b>{data.lastName}</li>
+            <li class="list-group-item"><img src={location} width="50" color={'blue'} alt="location"/> {data.location}</li>
+          </ul>
+        </div><br/>
+        </>
       )
+    })
+  return (
+      <>
+      <p className="text-center">{displayTeams.length} Result(s)</p>
+      { displayTeams }
+      </>
+    )
 }
 
 export default ListUsers

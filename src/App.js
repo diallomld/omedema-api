@@ -1,12 +1,12 @@
 import './App.css';
 import React from 'react';
-import SiderDemo from './components/Navbar';
+import SideBar from './components/SideBar/SideBar';
 
 function App() {
 
   return (
     <div>
-      <SiderDemo/>
+      <SideBar/>
         
     </div>
   );
