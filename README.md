@@ -1,7 +1,8 @@
 
 # Omedema-api
 
-This project was bootstrapped with Create React App to build this Team REST service
+This project was bootstrapped with Create React App
+>> I approached this project by using Create-react-app to call the REST API and build the UI
 
 
 ## Run project Locally
@@ -51,10 +52,6 @@ https://www.dropbox.com/s/2i3q2vxwn50umg0/folderStructure.PNG?raw=1
 >> - In **components folder**, you find all components of the application
 >> - the navigation and routes files are located In **Navigation folder**
 ## Screen App
-![The San Juan Mountains are beautiful!](https://www.dropbox.com/s/43gjgnlmyid38zi/screen1.PNG?raw=1)
-
-
-https://www.dropbox.com/s/43gjgnlmyid38zi/screen1.PNG?raw=1 
 
 ![The San Juan Mountains are beautiful!](https://www.dropbox.com/s/70jr3pzrvpomnjn/screen6.PNG?raw=1)
 
