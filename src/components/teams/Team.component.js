@@ -7,7 +7,7 @@ function TeamComponent({ teams, pagesVisited, teamsPerPage, searchTeamByName }) 
         .filter(value => {
             if (searchTeamByName === "")
                 return value
-            else if (value.displayName.toLowerCase().includes(searchTeamByName.toLowerCase()))
+            else if (value.name.toLowerCase().includes(searchTeamByName.toLowerCase()))
                 return value
 
             return null

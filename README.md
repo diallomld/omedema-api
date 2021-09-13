@@ -1,71 +1,83 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Omedema-api
 
-## Available Scripts
+This project was bootstrapped with Create React App to build this Team REST service
 
-In the project directory, you can run:
 
-### `yarn start`
+## Run project Locally
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Clone the project
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```bash
+  git clone https://github.com/diallomld/omedema-api.git
+```
 
-### `yarn test`
+Go to the project directory
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+  cd omedema-api
+```
 
-### `yarn build`
+Install dependencies
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+  npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Start the server
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+  npm start
+```
 
-### `yarn eject`
+  
+## Tech Stack
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**Client:** React, ant desing, bootstrap
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Requirements:** npm, Node
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  
+# Screenshots
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Folder Structure
+![The San Juan Mountains are beautiful!](https://www.dropbox.com/s/2i3q2vxwn50umg0/folderStructure.PNG?raw=1)
 
-## Learn More
+https://www.dropbox.com/s/2i3q2vxwn50umg0/folderStructure.PNG?raw=1
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+> - the most important pieces of code reside in the **src** folder.
+>
+>> - In the **Services folder**, you will find all the services for the API calls
+>> - In **components folder**, you find all components of the application
+>> - the navigation and routes files are located In **Navigation folder**
+## Screen App
+![The San Juan Mountains are beautiful!](https://www.dropbox.com/s/43gjgnlmyid38zi/screen1.PNG?raw=1)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+https://www.dropbox.com/s/43gjgnlmyid38zi/screen1.PNG?raw=1 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![The San Juan Mountains are beautiful!](https://www.dropbox.com/s/70jr3pzrvpomnjn/screen6.PNG?raw=1)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+https://www.dropbox.com/s/70jr3pzrvpomnjn/screen6.PNG?raw=1
 
-### Making a Progressive Web App
+![The San Juan Mountains are beautiful!](https://www.dropbox.com/s/acn73v87pysfy8k/screen2.PNG?raw=1)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+https://www.dropbox.com/s/acn73v87pysfy8k/screen2.PNG?raw=1
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+![The San Juan Mountains are beautiful!](https://www.dropbox.com/s/zs4a4jfzoxdeugo/screen3.PNG?raw=1)
 
-### Deployment
+https://www.dropbox.com/s/zs4a4jfzoxdeugo/screen3.PNG?raw=1
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `yarn build` fails to minify
+![The San Juan Mountains are beautiful!](https://www.dropbox.com/s/dpcht7wj2pwmeez/screen4.PNG?raw=1)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-"# omedema-api" 
+
+https://www.dropbox.com/s/dpcht7wj2pwmeez/screen4.PNG?raw=1
+
+![The San Juan Mountains are beautiful!](https://www.dropbox.com/s/4z00212dtfn3rql/screen5.PNG?raw=1)
+
+
+https://www.dropbox.com/s/4z00212dtfn3rql/screen5.PNG?raw=1
+
